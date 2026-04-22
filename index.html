@@ -343,13 +343,13 @@
       transform: translateY(-2px);
     }
     .layer-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 13px;
-      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
       color: var(--blue);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
     .layer h3 {
       font-family: 'Playfair Display', serif;
@@ -430,11 +430,10 @@
     }
     .split-card.enables .mark::before { content: '\2713'; }
 
-    /* Closed loop, circular orbital design */
+    /* Closed loop, full-bleed section */
     .loop {
       background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--indigo) 100%);
-      border-radius: 4px;
-      padding: 72px 48px 80px;
+      padding: 120px 0 130px;
       color: var(--white);
       position: relative;
       overflow: hidden;
@@ -442,16 +441,16 @@
     .loop::before {
       content: '';
       position: absolute;
-      top: -150px; right: -150px;
-      width: 400px; height: 400px;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
       background: radial-gradient(circle, rgba(20, 116, 196, 0.22) 0%, transparent 60%);
       pointer-events: none;
     }
     .loop::after {
       content: '';
       position: absolute;
-      bottom: -200px; left: -100px;
-      width: 400px; height: 400px;
+      bottom: -300px; left: -150px;
+      width: 500px; height: 500px;
       background: radial-gradient(circle, rgba(184, 201, 230, 0.10) 0%, transparent 60%);
       pointer-events: none;
     }
@@ -461,7 +460,7 @@
       z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1.1fr;
-      gap: 48px;
+      gap: 72px;
       align-items: center;
     }
 
@@ -497,7 +496,6 @@
       letter-spacing: 0.05em;
       color: var(--sky);
       font-weight: 500;
-      font-style: italic;
     }
 
     /* Circle diagram */
@@ -554,11 +552,12 @@
       margin-bottom: 4px;
     }
     .circle-center-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(14px, 1.6vw, 18px);
-      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(13px, 1.4vw, 15px);
+      font-weight: 600;
       color: var(--white);
-      line-height: 1.2;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
     }
 
     .node {
@@ -579,7 +578,7 @@
       border: 2px solid var(--blue);
       display: grid;
       place-items: center;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 15px;
       font-weight: 600;
       color: var(--sky);
@@ -630,7 +629,7 @@
     }
 
     @media (max-width: 560px) {
-      .loop { padding: 48px 24px 56px; }
+      .loop { padding: 72px 0 88px; }
       .circle-wrap { max-width: 320px; }
       .node { width: 96px; }
       .node-dot { width: 32px; height: 32px; font-size: 12px; margin-bottom: 4px; }
@@ -1063,57 +1062,60 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="loop reveal">
-        <div class="loop-inner">
-          <div class="loop-intro">
-            <div class="eyebrow">The Closed Loop</div>
-            <h4>Every cycle <em>compounds</em> the fund's proprietary intelligence.</h4>
-            <p>
-              Every interaction feeds the system. Targets identified, contacts enriched, emails sent, and responses tracked all return to the dataset, continuously improving targeting, prioritization, and conversion across the entire portfolio.
-            </p>
-            <div class="compound">A proprietary, compounding dataset that sharpens with every campaign.</div>
+  <!-- CLOSED LOOP, full-bleed section -->
+  <section class="loop" id="closed-loop">
+    <div class="container">
+      <div class="loop-inner reveal">
+        <div class="loop-intro">
+          <div class="eyebrow">The Closed Loop</div>
+          <h4>Every cycle <em>compounds</em> the fund's proprietary intelligence.</h4>
+          <p>
+            Every interaction feeds the system. Targets identified, contacts enriched, emails sent, and responses tracked all return to the dataset, continuously improving targeting, prioritization, and conversion across the entire portfolio.
+          </p>
+          <div class="compound">A proprietary, compounding dataset that sharpens with every campaign.</div>
+        </div>
+
+        <div class="circle-wrap" aria-label="Closed loop diagram showing the seven stages of the sourcing cycle">
+          <svg class="circle-svg" viewBox="0 0 460 460" aria-hidden="true">
+            <circle class="orbit" cx="230" cy="230" r="190"/>
+            <circle class="orbit-inner" cx="230" cy="230" r="100"/>
+          </svg>
+
+          <div class="circle-center">
+            <span class="circle-center-label">CDS Engine</span>
+            <span class="circle-center-title">Closed-Loop<br>System</span>
           </div>
 
-          <div class="circle-wrap" aria-label="Closed loop diagram showing the seven stages of the sourcing cycle">
-            <svg class="circle-svg" viewBox="0 0 460 460" aria-hidden="true">
-              <circle class="orbit" cx="230" cy="230" r="190"/>
-              <circle class="orbit-inner" cx="230" cy="230" r="100"/>
-            </svg>
-
-            <div class="circle-center">
-              <span class="circle-center-label">CDS Engine</span>
-              <span class="circle-center-title">Closed-Loop<br>System</span>
-            </div>
-
-            <div class="node node-1">
-              <div class="node-dot">1</div>
-              <div class="node-label">Map the market</div>
-            </div>
-            <div class="node node-2">
-              <div class="node-dot">2</div>
-              <div class="node-label">Structure targets</div>
-            </div>
-            <div class="node node-3">
-              <div class="node-dot">3</div>
-              <div class="node-label">Enrich decision-makers</div>
-            </div>
-            <div class="node node-4">
-              <div class="node-dot">4</div>
-              <div class="node-label">Surface priorities</div>
-            </div>
-            <div class="node node-5">
-              <div class="node-dot">5</div>
-              <div class="node-label">Execute outreach</div>
-            </div>
-            <div class="node node-6">
-              <div class="node-dot">6</div>
-              <div class="node-label">Generate pipeline</div>
-            </div>
-            <div class="node node-7">
-              <div class="node-dot">7</div>
-              <div class="node-label">Feed back into dataset</div>
-            </div>
+          <div class="node node-1">
+            <div class="node-dot">1</div>
+            <div class="node-label">Map the market</div>
+          </div>
+          <div class="node node-2">
+            <div class="node-dot">2</div>
+            <div class="node-label">Structure targets</div>
+          </div>
+          <div class="node node-3">
+            <div class="node-dot">3</div>
+            <div class="node-label">Enrich decision-makers</div>
+          </div>
+          <div class="node node-4">
+            <div class="node-dot">4</div>
+            <div class="node-label">Surface priorities</div>
+          </div>
+          <div class="node node-5">
+            <div class="node-dot">5</div>
+            <div class="node-label">Execute outreach</div>
+          </div>
+          <div class="node node-6">
+            <div class="node-dot">6</div>
+            <div class="node-label">Generate pipeline</div>
+          </div>
+          <div class="node node-7">
+            <div class="node-dot">7</div>
+            <div class="node-label">Feed back into dataset</div>
           </div>
         </div>
       </div>
